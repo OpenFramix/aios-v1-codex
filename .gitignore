@@ -1,7 +1,53 @@
-.env
-references/ai-history/
-*.log
-__pycache__/
+# System
 .DS_Store
+__pycache__/
+*.log
+*.pyc
+
+# Secrets and credentials — never commit these
+.env
+.env.*
+*.env
+*.key
+*.pem
+token.json
+credentials.json
+*_credentials.json
+*_token.json
+*_secret.json
+secret_*
+*.secret
 .agents/settings.local.json
 AGENTS.local.md
+
+# Brand assets (binaries — folder is tracked, files are not)
+brand-assets/*.png
+brand-assets/*.jpg
+brand-assets/*.jpeg
+brand-assets/*.webp
+brand-assets/*.gif
+brand-assets/*.svg
+brand-assets/*.pdf
+brand-assets/*.ai
+brand-assets/*.eps
+brand-assets/*.psd
+brand-assets/*.ttf
+brand-assets/*.otf
+brand-assets/*.woff
+brand-assets/*.woff2
+
+# Video and large media (anywhere in the project)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.m4v
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+
+# AI session history
+references/ai-history/

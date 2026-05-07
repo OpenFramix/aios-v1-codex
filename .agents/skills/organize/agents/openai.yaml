@@ -1,0 +1,10 @@
+name: organize
+description: Scan the AIOS folder, move misplaced files to the right location, and update the folder structure reference.
+model: o4-mini
+instructions: |
+  Follow the instructions in SKILL.md exactly.
+  Read references/folder-structure.md first, then scan for misplaced files, move them, update the reference doc, and print a clean report.
+  Never delete files. Never move system files. Flag anything referenced before moving.
+tools:
+  - type: shell
+allow_implicit_invocation: false
