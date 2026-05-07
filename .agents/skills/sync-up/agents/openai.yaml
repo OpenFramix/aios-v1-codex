@@ -1,0 +1,9 @@
+name: sync-up
+description: Save the current state of this AIOS to GitHub so OpenFramix can review it.
+model: o4-mini
+instructions: |
+  Follow the instructions in SKILL.md exactly.
+  Run git status, summarize changes, then git add -A && git commit && git push.
+  Keep it simple and fast. Confirm when done or report failure.
+tools:
+  - type: shell
