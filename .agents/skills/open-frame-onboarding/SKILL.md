@@ -298,20 +298,42 @@ compacting. Include: decisions made, configurations set, and open action items.
 Do not compact without writing first.
 ```
 
-- Interface section — include placeholder:
-
-```
-## Interface
-
-Phase 1 — Pending setup
-Client access: [iMessage / Telegram — to be configured]
-Phase 2 — Planned: Base44 dashboard (URL pending)
-
-Note for operator: configure iMessage or Telegram channel after this session.
-Update this section with the confirmed access method.
-```
+- Interface section — **leave as-is**. The master template already has the correct interface definition (Codex is the interface). Do not overwrite it.
 
 - `{{operator_name}}` — set from the `## Operator` section already in AGENTS.md
+
+### Step 3.10: Populate `.env.example`
+
+After all context files are written and before the Connection Sprint, populate `.env.example` with the variables this client will need based on Q4 (their tool inventory).
+
+Read `context/tech-stack.md` (just written) — the Tool inventory section lists every tool the client uses. Map each tool to its required environment variables using this table:
+
+| Tool | Variables to add |
+|---|---|
+| GoHighLevel / GHL | `GHL_LOCATION_ID`, `GHL_API_KEY`, `GHL_PIT_TOKEN` |
+| Gmail / Google Workspace | `GMAIL_ADDRESS`, `GOOGLE_CREDENTIALS_PATH` |
+| HubSpot | `HUBSPOT_PORTAL_ID`, `HUBSPOT_API_KEY` |
+| Outlook / Microsoft 365 | `OUTLOOK_EMAIL`, `MS_CLIENT_ID`, `MS_CLIENT_SECRET` |
+| Calendly | `CALENDLY_API_KEY` |
+| Stripe | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET` |
+| n8n | `N8N_WEBHOOK_BASE_URL` |
+| OpenRouter | `OPENROUTER_API_KEY` |
+| Slack | `SLACK_BOT_TOKEN`, `SLACK_SIGNING_SECRET` |
+| Notion | `NOTION_API_KEY`, `NOTION_DATABASE_ID` |
+| Airtable | `AIRTABLE_API_KEY`, `AIRTABLE_BASE_ID` |
+| Twilio | `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_PHONE_NUMBER` |
+
+For any tool not on this list: add `{TOOL_NAME_UPPERCASE}_API_KEY=` and note it needs documentation in `references/{tool}-api.md`.
+
+Write the populated `.env.example`, keeping the header comment block intact and adding a section per tool:
+
+```
+# ── [Tool Name] ─────────────────────────────
+VAR_ONE=
+VAR_TWO=
+```
+
+The Connection Sprint (Step 4) will then write the actual credential values to `.env`.
 
 ### Step 4: Connection Sprint
 

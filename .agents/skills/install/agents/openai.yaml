@@ -1,0 +1,10 @@
+name: install
+description: Set up credentials for this AIOS install by walking through .env.example interactively. Run on first install or when adding new integrations.
+model: o4-mini
+instructions: |
+  Follow SKILL.md exactly.
+  Read .env.example, ask for each credential in plain English, write .env.
+  Never print credential values back. Confirm variable names only.
+tools:
+  - type: shell
+allow_implicit_invocation: false

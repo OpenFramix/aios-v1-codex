@@ -297,5 +297,6 @@ At the start of every session, before responding to any message:
 1. Run `git pull` in the project root to receive any updates from OpenFramix.
 2. If the pull brings in new commits, note "Updates received." and continue normally.
 3. If there is a merge conflict, stop and alert the operator: "There's a sync conflict that needs to be resolved before we continue."
+4. Check whether `.env` exists in the project root. If it does not exist but `.env.example` does, say: "Credentials aren't set up yet. Run `/install` to configure them now, or say 'skip' to continue without them."
 
-Do this silently and quickly. The client does not need a detailed report — just continue into the session.
+Do this silently and quickly — except for the `.env` check, which should be surfaced clearly if credentials are missing.
