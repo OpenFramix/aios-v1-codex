@@ -118,9 +118,9 @@ Also check `context/tech-stack.md` — tools listed there but not yet in connect
 
 | Criterion | Points | How to detect |
 |---|---|---|
-| Interface or dashboard documented and real | 8 | AGENTS.md `## Interface` section describes: (1) a confirmed access method (iMessage/Telegram handle, or dashboard URL), AND (2) what the client can do without a terminal. Both required for full 8. URL/handle mentioned with real content = 4. Placeholder text only = 2. Missing entirely = 0. |
+| Interface or dashboard documented and real | 8 | AGENTS.md `## Interface` section names the platform (Codex or Claude Cowork) as the active interface AND describes what the client can do without a terminal — full 8. Platform named but client capabilities not described = 4. Section exists but contains only the original `{{Operator: configure...}}` placeholder = 2. Section missing entirely = 0. Optional channels (Telegram, dashboard) boost the install but are not required for full credit. |
 | Session management rules present | 6 | AGENTS.md includes a vault-first memory rule (check files before answering), AND defines what happens at context limit (auto-compact behavior or session summary protocol) |
-| Non-technical access demonstrated | 6 | Evidence the interface has actually been used: `runs/` contains a morning-brief file (proof it was delivered), OR the Interface section describes a confirmed channel with an active handle. If the section exists but is all placeholder = 2. If the section is filled with a real channel confirmed = 6. |
+| Non-technical access demonstrated | 6 | Evidence the platform interface is actively delivering value: `runs/` contains any dated session output (morning-brief, audit, level-up, roi-report) = 6. Interface section filled (platform named) but `runs/` is empty = 2. Nothing in `runs/` AND interface unconfigured = 0. |
 
 ---
 
@@ -151,7 +151,7 @@ Sort descending by leverage. Take top 3. For each, write one concrete next step:
 - **Need a domain skill:** "Use the skill creator to build a skill for [highest-pain task from domains.md — read it and name the specific task]."
 - **Need to reach a domain:** "Prefer API script: write `scripts/{tool}_api.py` + document at `references/{tool}-api.md`."
 - **No runs folder:** "Create `runs/` and configure skills to write timestamped output files there — this is the ROI evidence trail."
-- **No interface documented:** "Add a `## Interface` section to AGENTS.md describing how the client accesses the system. Even a placeholder with the intended URL counts toward Access scoring."
+- **No interface documented:** "Confirm Codex is the interface in AGENTS.md — replace the placeholder with a statement that Codex is the active interface and describe what the client can do. Optional: add Telegram for morning brief push delivery if the client wants it. Run `/morning-brief` at least once so `runs/` has evidence of use."
 - **No session rules:** "Add the vault-first memory rule and compact protocol to AGENTS.md."
 - **Need a recurring trigger:** "Create a Codex app automation for `/morning-brief`, or build a `daily-brief` skill the client runs each morning."
 
@@ -214,6 +214,6 @@ This delta line goes into the monthly ROI report. The client sees their AIOS get
 - **Read-only by default.** Never modify AGENTS.md, context files, skills, or connections. Only writes: the audit report + `audits/` folder.
 - **Be honest, not generous.** Stage 1 (40-69) is a good first-month score. Stage 3 takes real work. Don't inflate.
 - **Domain map is load-bearing.** If `context/domains.md` is missing, the whole Capabilities layer is guesswork. Flag it with a 3x multiplier every time.
-- **Access layer will score low early.** That's expected — the dashboard is Phase 2. The score still matters because it creates urgency to build it.
+- **Access scores against the platform-as-interface model.** Codex (or Claude Cowork) is the default interface — no dashboard or external channel is required for full credit. Optional channels (Telegram morning brief, web dashboard) are enhancements, not requirements. A filled Interface section + any output in `runs/` = full Access score.
 - **Speed matters.** Report in under 60 seconds. Read frontmatter only for skill files. Don't read full skill contents.
 - **Cadence detection requires evidence.** Skill modification timestamps and skill names alone do not prove scheduled activity. Always look for actual run files in `runs/` before awarding scheduled trigger points.

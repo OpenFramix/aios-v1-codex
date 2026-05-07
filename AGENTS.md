@@ -271,10 +271,16 @@ At 60% context, write a session summary to `runs/session-summary-{YYYY-MM-DD}.md
 
 ## Interface
 
-{{Operator: configure client access method here after install.}}
+Codex is the interface. The operator and the client interact with the AIOS directly through Codex sessions on their machine — open the project folder in Codex and the OS is live. No separate dashboard, login, or messaging channel is required for normal operation.
 
-Phase 1 — Pending setup
-Phase 2 — Planned: Base44 dashboard (URL pending)
+What the client can do without a terminal:
+- Open Codex, navigate to their AIOS folder, and start a session
+- Run any skill by typing `/skill-name`
+- Files (decisions, runs, audits) save into the project folder automatically; data persists between sessions
+
+Optional enhancements (configured per client request, not required):
+- Telegram bot for daily morning brief push delivery
+- Future: web dashboard for non-technical surface (Phase 2)
 
 ---
 
