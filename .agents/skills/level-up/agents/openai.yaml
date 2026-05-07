@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIOS Level Up"
+  short_description: "Scope and ship one automation"
+  default_prompt: "Use $level-up to choose, scope, and ship one automation."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+.env
+references/ai-history/
+*.log
+__pycache__/
+.DS_Store
+.agents/settings.local.json
+AGENTS.local.md

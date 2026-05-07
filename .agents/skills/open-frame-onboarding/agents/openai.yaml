@@ -1,0 +1,7 @@
+interface:
+  display_name: "Open (Frame) Onboarding"
+  short_description: "Run the Open (Frame) client setup"
+  default_prompt: "Use $open-frame-onboarding to run Open (Frame) onboarding for this client AIOS."
+
+policy:
+  allow_implicit_invocation: true

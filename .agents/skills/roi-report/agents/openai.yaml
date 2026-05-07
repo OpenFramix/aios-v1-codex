@@ -1,0 +1,7 @@
+interface:
+  display_name: "ROI Report"
+  short_description: "Create the monthly AIOS ROI report"
+  default_prompt: "Use $roi-report to create the monthly AIOS ROI report."
+
+policy:
+  allow_implicit_invocation: true

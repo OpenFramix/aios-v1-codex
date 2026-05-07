@@ -1,0 +1,7 @@
+interface:
+  display_name: "Morning Brief"
+  short_description: "Generate the daily AIOS brief"
+  default_prompt: "Use $morning-brief to generate today's AIOS morning brief."
+
+policy:
+  allow_implicit_invocation: true

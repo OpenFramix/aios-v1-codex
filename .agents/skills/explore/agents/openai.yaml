@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIOS Explore"
+  short_description: "Refresh the automation pipeline"
+  default_prompt: "Use $explore to refresh and rank the automation pipeline."
+
+policy:
+  allow_implicit_invocation: true

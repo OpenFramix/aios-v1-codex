@@ -1,0 +1,7 @@
+interface:
+  display_name: "AIOS Audit"
+  short_description: "Score AIOS structure and gaps"
+  default_prompt: "Use $audit to score this AIOS and surface the top gaps."
+
+policy:
+  allow_implicit_invocation: true

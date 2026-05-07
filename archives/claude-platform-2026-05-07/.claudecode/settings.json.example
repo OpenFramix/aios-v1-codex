@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "gmail": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gmail"],
+      "note": "Wire after Gmail OAuth setup. See connections.md."
+    },
+    "google-calendar": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-google-calendar"],
+      "note": "Wire after Gmail is connected — shares OAuth credentials."
+    },
+    "google-drive": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+      "note": "Wire after Gmail OAuth setup."
+    }
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(cat *)",
+      "Bash(ls *)"
+    ]
+  },
+  "_instructions": "Copy this file to .claude/settings.json and fill in actual credentials. Add client-specific MCP servers as connections are wired. Never commit .claude/settings.json — it contains credentials."
+}

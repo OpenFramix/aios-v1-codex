@@ -1,0 +1,15 @@
+{
+  "name": "aios-v1",
+  "version": "0.1.0",
+  "description": "OpenFramix AI Operating System — six core skills (/onboard, /audit, /level-up, /explore, /morning-brief, /roi-report) that turn this repo into a working AIOS for any client.",
+  "author": {
+    "name": "OpenFramix"
+  },
+  "keywords": [
+    "aios",
+    "openframix",
+    "operator",
+    "automation",
+    "retainer"
+  ]
+}
